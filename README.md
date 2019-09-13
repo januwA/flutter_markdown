@@ -7,6 +7,16 @@ A markdown renderer for Flutter. It supports the
 [original format](https://daringfireball.net/projects/markdown/), but no inline
 html.
 
+
+## Install
+```
+dependencies:
+  flutter_markdown:
+    git: 
+      url: https://github.com/januwA/flutter_markdown.git
+      ref: flutter_web
+```
+
 ## Getting Started
 
 Using the Markdown widget is simple, just pass in the source markdown as a
