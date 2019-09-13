@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'dart:io';
+// import 'dart:io';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +45,7 @@ abstract class MarkdownWidget extends StatefulWidget {
     this.styleSheet,
     this.syntaxHighlighter,
     this.onTapLink,
-    this.imageDirectory,
+    // this.imageDirectory,
   }) : assert(data != null),
        super(key: key);
 
@@ -66,7 +66,7 @@ abstract class MarkdownWidget extends StatefulWidget {
   final MarkdownTapLinkCallback onTapLink;
 
   /// The base directory holding images referenced by Img tags with local file paths.
-  final Directory imageDirectory;
+  // final Directory imageDirectory;
 
   /// Subclasses should override this function to display the given children,
   /// which are the parsed representation of [data].
@@ -112,7 +112,7 @@ class _MarkdownWidgetState extends State<MarkdownWidget> implements MarkdownBuil
     final MarkdownBuilder builder = new MarkdownBuilder(
       delegate: this,
       styleSheet: styleSheet,
-      imageDirectory: widget.imageDirectory,
+      // imageDirectory: widget.imageDirectory,
     );
     _children = builder.build(document.parseLines(lines));
   }
@@ -165,14 +165,14 @@ class MarkdownBody extends MarkdownWidget {
     MarkdownStyleSheet styleSheet,
     SyntaxHighlighter syntaxHighlighter,
     MarkdownTapLinkCallback onTapLink,
-    Directory imageDirectory,
+    // Directory imageDirectory,
   }) : super(
     key: key,
     data: data,
     styleSheet: styleSheet,
     syntaxHighlighter: syntaxHighlighter,
     onTapLink: onTapLink,
-    imageDirectory: imageDirectory,
+    // imageDirectory: imageDirectory,
   );
 
   @override
@@ -203,7 +203,7 @@ class Markdown extends MarkdownWidget {
     MarkdownStyleSheet styleSheet,
     SyntaxHighlighter syntaxHighlighter,
     MarkdownTapLinkCallback onTapLink,
-    Directory imageDirectory,
+    // Directory imageDirectory,
     this.padding: const EdgeInsets.all(16.0),
   }) : super(
     key: key,
@@ -211,7 +211,7 @@ class Markdown extends MarkdownWidget {
     styleSheet: styleSheet,
     syntaxHighlighter: syntaxHighlighter,
     onTapLink: onTapLink,
-    imageDirectory: imageDirectory,
+    // imageDirectory: imageDirectory,
   );
 
   /// The amount of space by which to inset the children.
